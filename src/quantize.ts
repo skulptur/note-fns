@@ -1,7 +1,7 @@
 import { snapToGrip } from './utils/snapToGrip';
 import { setTime } from './setTime';
 import { Clip } from './makeClip';
-import { curry } from 'lodash';
+import { curry } from 'ramda';
 
 /**
  * Quantizes all the notes in the clip.

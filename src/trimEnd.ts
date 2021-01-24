@@ -2,7 +2,6 @@ import { isNote } from './isNote';
 import { isClip } from './isClip';
 import { Clip, makeClip } from './makeClip';
 import { makeNote, Note } from './makeNote';
-import { curry } from 'lodash';
 
 const trimEndNote = (endTime: number, note: Note): Note => {
   return makeNote({

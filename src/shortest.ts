@@ -1,4 +1,4 @@
-import { curry } from 'lodash';
+import { curry } from 'ramda';
 import { isLonger } from './isLonger';
 import { Note } from './makeNote';
 

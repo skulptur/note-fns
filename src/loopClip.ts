@@ -1,4 +1,4 @@
-import { curry } from 'lodash';
+import { curry } from 'ramda';
 import { concat } from './concat';
 import { Clip } from './makeClip';
 

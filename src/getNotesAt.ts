@@ -1,5 +1,4 @@
-import { curry } from 'lodash';
-import { clip } from 'unit-fns';
+import { curry } from 'ramda';
 import { getNotes } from './getNotes';
 import { isPlayingAt } from './isPlayingAt';
 import { Clip } from './makeClip';

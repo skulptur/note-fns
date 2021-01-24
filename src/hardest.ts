@@ -1,5 +1,5 @@
 // @ts-ignore
-import { curry } from 'lodash';
+import { curry } from 'ramda';
 import { isHarder } from './isHarder';
 import { Note } from './makeNote';
 

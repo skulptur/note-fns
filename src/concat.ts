@@ -1,6 +1,6 @@
 import { Clip, makeClip } from './makeClip';
 import { offsetTime } from './offsetTime';
-import { curry } from 'lodash';
+import { curry } from 'ramda';
 
 /**
  * Curried binary function that takes two clips and returns a new clip with both contents in sequence.
