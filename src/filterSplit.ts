@@ -2,7 +2,7 @@ import { filter } from './filter';
 import { Clip } from './makeClip';
 import { Note } from './makeNote';
 
-export const binarySplit = (
+export const filterSplit = (
   predicate: (note: Note, index: number, notes: Array<Note>) => boolean,
   clip: Clip
 ) => {
