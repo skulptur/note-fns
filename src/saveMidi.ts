@@ -1,7 +1,7 @@
 // TODO: fix
 // @ts-ignore
 import { Midi } from '@tonejs/midi';
-import { Clip } from './makeClip';
+import { Clip } from './clipOperators/makeClip';
 const fs = require('fs');
 
 type SaveMidiOptions = {

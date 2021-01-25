@@ -1,7 +1,7 @@
-import { isNote } from './isNote';
-import { isClip } from './isClip';
-import { Clip, makeClip } from './makeClip';
-import { makeNote, Note } from './makeNote';
+import { isNote } from './predicates/isNote';
+import { isClip } from './predicates/isClip';
+import { Clip, makeClip } from './clipOperators/makeClip';
+import { makeNote, Note } from './noteOperators/makeNote';
 
 const trimEndNote = (endTime: number, note: Note): Note => {
   return makeNote({
