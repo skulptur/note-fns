@@ -9,5 +9,5 @@ export const binarySplit = (
   const positiveSide = filter(predicate, clip);
   const negativeSide = filter(note => !positiveSide.notes.includes(note), clip);
 
-  return [positiveSide, negativeSide];
+  return [positiveSide, negativeSide] as const;
 };
