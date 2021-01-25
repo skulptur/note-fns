@@ -10,11 +10,7 @@ export type Clip = {
   _tag: 'Clip';
   duration: number;
   notes: Array<Note>;
-  map: (mapper: (note: Note, index: number) => Note) => Clip;
-  flatMap: (
-    mapper: (note: Note, index: number) => Note | Array<Note> | Clip
-  ) => Clip;
-  toArray: () => Array<Note>;
+  map: (notesMap: (notes: Array<Note>) => Array<Note>) => Clip;
 };
 
 export const makeClip = (options: ClipOptions = {}): Clip => {
@@ -27,23 +23,11 @@ export const makeClip = (options: ClipOptions = {}): Clip => {
     _tag: 'Clip',
     duration,
     notes,
-    map: mapper => {
+    map: notesMap => {
       return makeClip({
-        notes: notes.map(mapper),
-        duration,
+        ...options,
+        notes: notesMap(notes),
       });
-    },
-    flatMap: mapper => {
-      return makeClip({
-        notes: notes.flatMap((note, index) => {
-          const clipOrNote = mapper(note, index);
-          return 'notes' in clipOrNote ? clipOrNote.notes : clipOrNote;
-        }),
-        duration,
-      });
-    },
-    toArray: () => {
-      return notes.concat();
     },
   };
 };

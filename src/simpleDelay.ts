@@ -23,19 +23,21 @@ export const simpleDelay = curry(
       // velocityOffset = 0,
     } = options;
 
-    return clip.flatMap(note => {
-      return [
-        note,
-        ...times(i => {
-          const progress = i / (count - 1);
-          return {
-            ...note,
-            name: offsetPitch(i, note).name,
-            time: note.time + interval * (i + pitchOffset),
-            velocity: mix(note.velocity || 1, 0, progress),
-          };
-        }, count),
-      ];
+    return clip.map(notes => {
+      return notes.flatMap(note => {
+        return [
+          note,
+          ...times(i => {
+            const progress = i / (count - 1);
+            return {
+              ...note,
+              name: offsetPitch(i, note).name,
+              time: note.time + interval * (i + pitchOffset),
+              velocity: mix(note.velocity || 1, 0, progress),
+            };
+          }, count),
+        ];
+      });
     });
   }
 );
