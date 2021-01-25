@@ -1,6 +1,4 @@
 import { curry } from 'ramda';
-// @ts-ignore
-import { noteToMidi } from 'music-fns';
 import { isHigher } from './isHigher';
 import { Note } from './makeNote';
 

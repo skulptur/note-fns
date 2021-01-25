@@ -1,24 +1,19 @@
-import { curry, times } from 'lodash';
-import { Note } from './makeNote';
+// import { curry } from 'ramda';
+// import { isPlayingAt } from './isPlayingAt';
+// import { Note } from './makeNote';
+// import { trimEnd } from './trimEnd';
+// import { trimStart } from './trimStart';
 
-// TODO: split parts // so we can get multiple array of notes based on a given time
-// TODO: allow splitting notes with a sampling function (from unit-fns!!!)
-
-// takes a note and splits into n notes evenly
-
-/**
- * Takes a note and splits it evenly into multiple notes.
- */
-export const splitNote = curry(
-  (n: number, note: Note): Array<Note> => {
-    const newDuration = note.duration / n;
-
-    return times(n, i => {
-      return {
-        ...note,
-        duration: newDuration,
-        time: note.time + newDuration * i,
-      };
-    });
-  }
-);
+// /**
+//  * Takes a note and splits it into 2 notes as long as note is playing at given time.
+//  * Otherwise returns the same note in an array.
+//  */
+// export const splitNote = curry((time: number, note: Note):
+//   | [Note, Note]
+//   | [Note] => {
+//   if (isPlayingAt(time, note)) {
+//     return [trimEnd(time, note), trimStart(time, note)];
+//   }
+//   return [note];
+// });
+export const foo = 'bar';

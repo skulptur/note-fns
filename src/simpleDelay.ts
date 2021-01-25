@@ -1,4 +1,4 @@
-import { curry, times } from 'lodash';
+import { curry, times } from 'ramda';
 import { mix } from 'unit-fns';
 import { Clip } from './makeClip';
 import { offsetPitch } from './offsetPitch';
@@ -26,7 +26,7 @@ export const simpleDelay = curry(
     return clip.flatMap(note => {
       return [
         note,
-        ...times(count, i => {
+        ...times(i => {
           const progress = i / (count - 1);
           return {
             ...note,
@@ -34,7 +34,7 @@ export const simpleDelay = curry(
             time: note.time + interval * (i + pitchOffset),
             velocity: mix(note.velocity || 1, 0, progress),
           };
-        }),
+        }, count),
       ];
     });
   }
