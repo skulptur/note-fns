@@ -1,6 +1,6 @@
 import { curry } from 'ramda';
 import { isLower } from '../predicates/isLower';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 /**
  * Returns the note with lowest pitch.

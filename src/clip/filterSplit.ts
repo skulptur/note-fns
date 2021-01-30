@@ -1,6 +1,6 @@
 import { filter } from './filter';
 import { Clip } from './makeClip';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 export const filterSplit = (
   predicate: (note: Note, index: number, notes: Array<Note>) => boolean,

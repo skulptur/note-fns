@@ -2,7 +2,7 @@ import { trimEnd } from '../trimEnd';
 import { getNotes } from './getNotes';
 import { getNotesAt } from './getNotesAt';
 import { Clip, makeClip } from './makeClip';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 /**
  * Limits the maximum number of notes playing simultaneously.

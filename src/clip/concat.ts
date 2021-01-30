@@ -1,5 +1,5 @@
 import { Clip, makeClip } from './makeClip';
-import { offsetTime } from '../noteOperators/offsetTime';
+import { offsetTime } from '../note/offsetTime';
 import { curry } from 'ramda';
 
 /**

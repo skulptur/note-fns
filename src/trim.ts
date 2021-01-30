@@ -1,5 +1,5 @@
-import { Note } from './noteOperators/makeNote';
-import { Clip } from './clipOperators/makeClip';
+import { Note } from './note/makeNote';
+import { Clip } from './clip/makeClip';
 import { trimStart } from './trimStart';
 import { trimEnd } from './trimEnd';
 

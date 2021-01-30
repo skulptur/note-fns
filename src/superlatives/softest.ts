@@ -1,6 +1,6 @@
 import { curry } from 'ramda';
 import { isSofter } from '../predicates/isSofter';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 /**
  * Returns the softest note.

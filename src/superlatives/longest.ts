@@ -1,7 +1,7 @@
 // @ts-ignore
 import { curry } from 'ramda';
 import { isLonger } from '../predicates/isLonger';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 /**
  * Returns the longest note.

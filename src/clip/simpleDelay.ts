@@ -1,7 +1,7 @@
 import { curry, times } from 'ramda';
 import { mix } from 'unit-fns';
 import { Clip } from './makeClip';
-import { offsetPitch } from '../noteOperators/offsetPitch';
+import { offsetPitch } from '../note/offsetPitch';
 
 type SimpleDelayOptions = Partial<{
   interval: number; // TODO: or array of number and use it cyclic

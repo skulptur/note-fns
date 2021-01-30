@@ -1,6 +1,6 @@
 import { curry } from 'ramda';
 import { isOlder } from '../predicates/isOlder';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 /**
  * Returns the note with oldest start time.

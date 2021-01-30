@@ -1,6 +1,6 @@
 import { curry } from 'ramda';
 import { isHigher } from '../predicates/isHigher';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 /**
  * Returns the note with highest pitch

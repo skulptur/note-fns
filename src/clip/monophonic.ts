@@ -1,6 +1,6 @@
 import { limitPolyphony } from './limitPolyphony';
 import { Clip } from './makeClip';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 /**
  * Makes a clip monophonic (only one note plays at a time).

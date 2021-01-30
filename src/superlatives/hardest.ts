@@ -1,7 +1,7 @@
 // @ts-ignore
 import { curry } from 'ramda';
 import { isHarder } from '../predicates/isHarder';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 /**
  * Returns the hardest note.

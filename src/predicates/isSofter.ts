@@ -1,5 +1,5 @@
 import { curry } from 'ramda';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 /**
  * Is noteA's velocity smaller than noteB's velocity

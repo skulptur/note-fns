@@ -1,5 +1,5 @@
 import { curry } from 'ramda';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 /**
  * Returns true if the note is playing at the specified time.

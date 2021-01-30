@@ -1,4 +1,4 @@
-import { Clip, makeClip } from '../clipOperators/makeClip';
+import { Clip, makeClip } from '../clip/makeClip';
 
 // doesn't change anything, just sorts the clip notes
 export const sortByStart = (clip: Clip): Clip => {

@@ -1,7 +1,7 @@
 import { curry } from 'ramda';
 // @ts-ignore
 import { noteToMidi } from 'music-fns';
-import { Note } from '../noteOperators/makeNote';
+import { Note } from '../note/makeNote';
 
 /**
  * Is noteA's pitch higher than noteB's pitch

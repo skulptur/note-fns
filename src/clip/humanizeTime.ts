@@ -1,5 +1,5 @@
 import { Clip, makeClip } from './makeClip';
-import { offsetTime } from '../noteOperators/offsetTime';
+import { offsetTime } from '../note/offsetTime';
 
 // TODO: might be too specific to include as is... should not use Math.random and instead use a provided function which could be a seed random or anything else
 // also should allow changing other things than just time
