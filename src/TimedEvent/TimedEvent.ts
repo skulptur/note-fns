@@ -36,6 +36,13 @@ const monoidMax: Monoid<number> = {
   empty: 0,
 };
 
+export const add: Monoid<TimedEvent> = {
+  empty,
+  concat: (a, b) => {
+    return create(a.start + b.start, a.end + b.end);
+  },
+};
+
 // the resulting TimedEvent will have:
 // start: the min of the two starts
 // end: the max of the two ends
@@ -44,15 +51,15 @@ export const merge: Monoid<TimedEvent> = getStructMonoid({
   end: monoidMax,
 });
 
-// the resulting TimedEvent will have:
-// start: the min of the two starts
-// end: the max of the two starts
-export const cutLeft: Monoid<TimedEvent> = {
-  empty,
-  concat: (x, y) => {
-    return create(Math.min(x.start, y.start), Math.max(x.start, y.start));
-  },
-};
+// // the resulting TimedEvent will have:
+// // start: the min of the two starts
+// // end: the max of the two starts
+// export const cutLeft: Monoid<TimedEvent> = {
+//   empty,
+//   concat: (x, y) => {
+//     return create(Math.min(x.start, y.start), Math.max(x.start, y.start));
+//   },
+// };
 
 export const show: Show<TimedEvent> = {
   show: a => {

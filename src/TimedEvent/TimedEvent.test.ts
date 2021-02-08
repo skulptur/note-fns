@@ -1,4 +1,4 @@
-import { eq, merge } from './TimedEvent';
+import { eq, add } from './TimedEvent';
 import * as laws from 'fp-ts-laws';
 import * as fc from 'fast-check';
 
@@ -12,7 +12,11 @@ describe('TimedEvent', () => {
     laws.eq(eq, arbitraryTimedEvent);
   });
 
-  it('has a merge that satisfies semigroup laws', () => {
-    laws.semigroup(merge, eq, arbitraryTimedEvent);
+  it('has an add monoid instance', () => {
+    laws.monoid(add, eq, arbitraryTimedEvent);
   });
+
+  // it('has a cutLeft that satisfies semigroup laws', () => {
+  //   laws.semigroup(cutLeft, eq, arbitraryTimedEvent);
+  // });
 });
