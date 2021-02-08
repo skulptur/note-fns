@@ -1,7 +1,7 @@
-import { Ord } from 'fp-ts/lib/Ord';
 import { Show } from 'fp-ts/lib/Show';
 import { Monoid } from 'fp-ts/lib/Monoid';
 import { getStructMonoid } from 'fp-ts/lib/Monoid';
+import { Eq } from 'fp-ts/lib/Eq';
 
 export interface TimedEvent {
   start: number;
@@ -17,12 +17,13 @@ export const create = (start: number, end: number) => {
 
 export const empty = create(0, 0);
 
+const equals = (a: TimedEvent, b: TimedEvent) => {
+  return a.start === b.start && a.end === b.end;
+};
+
 // instances
-export const ord: Ord<TimedEvent> = {
-  equals: (a, b) => a.start === b.start && a.end === b.end,
-  compare: (a, b) => {
-    return a.start < b.start ? -1 : a.start > b.start ? 1 : 0;
-  },
+export const eq: Eq<TimedEvent> = {
+  equals,
 };
 
 const monoidMin: Monoid<number> = {
@@ -35,10 +36,23 @@ const monoidMax: Monoid<number> = {
   empty: 0,
 };
 
+// the resulting TimedEvent will have:
+// start: the min of the two starts
+// end: the max of the two ends
 export const merge: Monoid<TimedEvent> = getStructMonoid({
   start: monoidMin,
   end: monoidMax,
 });
+
+// the resulting TimedEvent will have:
+// start: the min of the two starts
+// end: the max of the two starts
+export const cutLeft: Monoid<TimedEvent> = {
+  empty,
+  concat: (x, y) => {
+    return create(Math.min(x.start, y.start), Math.max(x.start, y.start));
+  },
+};
 
 export const show: Show<TimedEvent> = {
   show: a => {
