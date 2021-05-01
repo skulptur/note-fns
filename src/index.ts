@@ -1,13 +1,12 @@
 export { getMiddleCFrequency } from './lib/getMiddleCFrequency';
-export { mapData } from './lib/mapData';
-export { mapRange } from './lib/mapRange';
-export { mapValue } from './lib/mapValue';
+export { mapData } from './lib/container/mapData';
+export { mapRange } from './lib/container/mapRange';
+export { mapValue } from './lib/container/mapValue';
 export { noteNameOffsets } from './lib/noteNameOffsets';
 export { noteNameToFrequency } from './lib/noteNameToFrequency';
 export { toMidi } from './lib/toMidi';
 export {
   chord,
-  mode,
   notes,
   accidentalToLetter,
   accidentalToSymbol,
@@ -72,32 +71,32 @@ export {
 
 export {
   Scale,
-  algerianScale,
-  alteredScale,
-  arabicScale,
-  augmentedScale,
-  balineseScale,
-  bluesScale,
-  byzantineScale,
-  chineseScale,
-  chromaticScale,
-  doubleHarmonicScale,
-  enigmaticScale,
-  gypsyMajorScale,
-  harmonicMinorScale,
-  hirajoshiScale,
-  inSenScale,
-  japaneseScale,
-  majorPentatonicScale,
-  majorScale,
-  melodicMinorScale,
-  minorPentatonicScale,
-  mongolianScale,
-  naturalMinorScale,
-  pelogScale,
-  prometheusScale,
-  wholeToneScale,
-  yoScale,
+  algerian,
+  altered,
+  arabic,
+  augmented,
+  balinese,
+  blues,
+  byzantine,
+  chinese,
+  chromatic,
+  doubleHarmonic,
+  enigmatic,
+  gypsyMajor,
+  harmonicMinor,
+  hirajoshi,
+  inSen,
+  japanese,
+  majorPentatonic,
+  major,
+  melodicMinor,
+  minorPentatonic,
+  mongolian,
+  naturalMinor,
+  pelog,
+  prometheus,
+  wholeTone,
+  yo,
 } from './lib/scales';
 
 export {
@@ -166,3 +165,14 @@ export {
   augmentedSeventh,
   A7,
 } from './lib/intervals';
+
+export {
+  Mode,
+  ionian,
+  dorian,
+  phrygian,
+  lydian,
+  mixolydian,
+  aeolian,
+  locrian,
+} from './lib/modes';

@@ -86,8 +86,6 @@ import { Midi } from './types/Midi';
 
 export const chord = internalChord;
 
-export const mode = internalMode;
-
 export const notes = internalNOTES;
 
 export const accidentalToLetter = internalAccidentalToLetter as (
