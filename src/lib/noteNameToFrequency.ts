@@ -7,7 +7,7 @@ import {
   middleOctave,
 } from './getMiddleCFrequency';
 
-// TODO: duplicate of music-fns noteToFrequency
+// TODO: is it duplicate of music-fns noteToFrequency? if not then must export this
 export const noteNameToFrequency = (
   name: NoteName,
   middleAFrequency: Hertz = defaultMiddleAFrequency as Hertz

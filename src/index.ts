@@ -3,7 +3,6 @@ export { mapData } from './lib/container/mapData';
 export { mapRange } from './lib/container/mapRange';
 export { mapValue } from './lib/container/mapValue';
 export { noteNameOffsets } from './lib/noteNameOffsets';
-export { noteNameToFrequency } from './lib/noteNameToFrequency';
 export { toMidi } from './lib/toMidi';
 export {
   noteVariations,
