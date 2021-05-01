@@ -6,7 +6,7 @@ export { noteNameOffsets } from './lib/noteNameOffsets';
 export { noteNameToFrequency } from './lib/noteNameToFrequency';
 export { toMidi } from './lib/toMidi';
 export {
-  notes,
+  noteVariations,
   accidentalToLetter,
   accidentalToSymbol,
   areEqual,
