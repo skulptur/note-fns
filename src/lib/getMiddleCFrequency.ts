@@ -1,4 +1,4 @@
-import { Hertz } from './types';
+import { Hertz } from './types/Hertz';
 
 // the octave number of our known frequency, for example middle C is C4
 export const middleOctave = 4;

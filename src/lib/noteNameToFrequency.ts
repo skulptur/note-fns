@@ -1,4 +1,5 @@
-import { NoteName, Hertz } from './types';
+import { Hertz } from './types/Hertz';
+import { NoteName } from './types/NoteName';
 import { noteNameOffsets } from './noteNameOffsets';
 import {
   defaultMiddleAFrequency,
