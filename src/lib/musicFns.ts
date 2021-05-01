@@ -86,8 +86,6 @@ import { Midi } from './types/Midi';
 
 export const chord = internalChord;
 
-export const interval = internalInterval;
-
 export const mode = internalMode;
 
 export const notes = internalNOTES;
@@ -315,11 +313,11 @@ export const noteToMidi = internalNoteToMidi as (
   options: NoteToMidiProps
 ) => Midi;
 
-export const noteToObject = internalNoteToObject as (
+export const noteToNoteDescription = internalNoteToObject as (
   scientificNote: ScientificNote
 ) => NoteDescription;
 
-export const objectToNote = internalObjectToNote as (
+export const noteDescriptionToNote = internalObjectToNote as (
   noteObject: NoteDescription
 ) => ScientificNote;
 

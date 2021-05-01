@@ -1,6 +1,6 @@
-import { ExtractData, Note } from './types/Note';
+import { ExtractData, NoteContainer } from './types/NoteContainer';
 
-export const mapData = <T extends Note>(
+export const mapData = <T extends NoteContainer>(
   note: T,
   fn: (data: ExtractData<T>) => ExtractData<T>
 ) => {
