@@ -35,13 +35,24 @@ console.log(Scale); // logs all built-in scales with camelCase keys.
 console.log(naturalMinorScale); // logs array of interval
 ```
 
-### Intervals
+### Modes
 
 Similarly as with scales, note-fns exports the constant directly as well as an object containing all of them. Example:
 
 ```typescript
-import { Interval, perfectFith } from 'note-fns';
+import { Mode, phrygianMode } from 'note-fns';
 
-console.log(Interval); // logs all built-in intervals with camelCase keys.
-console.log(perfectFith); // 7
+console.log(Mode); // logs all modes with camelCase keys.
+console.log(phrygianMode); // [1, 2, 2, 2, 1, 2, 2]
+```
+
+### Intervals
+
+Example:
+
+```typescript
+import { Interval, perfectFithInterval } from 'note-fns';
+
+console.log(Interval); // logs all intervals with camelCase keys.
+console.log(perfectFithInterval); // 7
 ```

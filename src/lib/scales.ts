@@ -1,58 +1,58 @@
 import { Intervals } from './types/types';
 
-export const algerian: Intervals = [2, 1, 2, 1, 1, 1, 3, 1];
-export const altered: Intervals = [1, 2, 1, 2, 2, 2, 2];
-export const arabic: Intervals = [1, 3, 1, 2, 1, 3, 1];
-export const augmented: Intervals = [3, 1, 3, 1, 3, 1];
-export const balinese: Intervals = [1, 2, 4, 1, 4];
-export const blues: Intervals = [3, 2, 1, 1, 3, 2];
-export const byzantine: Intervals = [1, 3, 1, 2, 1, 3, 1];
-export const chinese: Intervals = [4, 2, 1, 4, 1];
-export const chromatic: Intervals = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-export const doubleHarmonic: Intervals = [1, 3, 1, 2, 1, 3, 1];
-export const enigmatic: Intervals = [1, 3, 2, 2, 2, 1, 1];
-export const gypsyMajor: Intervals = [1, 3, 1, 2, 1, 3, 1];
-export const harmonicMinor: Intervals = [2, 1, 2, 2, 1, 3, 1];
-export const hirajoshi: Intervals = [1, 4, 1, 4, 2];
-export const inSen: Intervals = [1, 4, 2, 3, 2];
-export const japanese: Intervals = [1, 4, 2, 3, 2];
-export const majorPentatonic: Intervals = [2, 2, 3, 2, 3];
-export const major: Intervals = [2, 2, 1, 2, 2, 2, 1];
-export const melodicMinor: Intervals = [2, 1, 2, 2, 2, 2, 1];
-export const minorPentatonic: Intervals = [3, 2, 2, 3, 2];
-export const mongolian: Intervals = [2, 2, 3, 2, 3];
-export const naturalMinor: Intervals = [2, 1, 2, 2, 1, 2, 2];
-export const pelog: Intervals = [1, 2, 4, 1, 4];
-export const prometheus: Intervals = [2, 2, 2, 3, 1, 2];
-export const wholeTone: Intervals = [2, 2, 2, 2, 2, 2];
-export const yo: Intervals = [2, 3, 2, 2, 3];
+export const algerianScale: Intervals = [2, 1, 2, 1, 1, 1, 3, 1];
+export const alteredScale: Intervals = [1, 2, 1, 2, 2, 2, 2];
+export const arabicScale: Intervals = [1, 3, 1, 2, 1, 3, 1];
+export const augmentedScale: Intervals = [3, 1, 3, 1, 3, 1];
+export const balineseScale: Intervals = [1, 2, 4, 1, 4];
+export const bluesScale: Intervals = [3, 2, 1, 1, 3, 2];
+export const byzantineScale: Intervals = [1, 3, 1, 2, 1, 3, 1];
+export const chineseScale: Intervals = [4, 2, 1, 4, 1];
+export const chromaticScale: Intervals = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+export const doubleHarmonicScale: Intervals = [1, 3, 1, 2, 1, 3, 1];
+export const enigmaticScale: Intervals = [1, 3, 2, 2, 2, 1, 1];
+export const gypsyMajorScale: Intervals = [1, 3, 1, 2, 1, 3, 1];
+export const harmonicMinorScale: Intervals = [2, 1, 2, 2, 1, 3, 1];
+export const hirajoshiScale: Intervals = [1, 4, 1, 4, 2];
+export const inSenScale: Intervals = [1, 4, 2, 3, 2];
+export const japaneseScale: Intervals = [1, 4, 2, 3, 2];
+export const majorPentatonicScale: Intervals = [2, 2, 3, 2, 3];
+export const majorScale: Intervals = [2, 2, 1, 2, 2, 2, 1];
+export const melodicMinorScale: Intervals = [2, 1, 2, 2, 2, 2, 1];
+export const minorPentatonicScale: Intervals = [3, 2, 2, 3, 2];
+export const mongolianScale: Intervals = [2, 2, 3, 2, 3];
+export const naturalMinorScale: Intervals = [2, 1, 2, 2, 1, 2, 2];
+export const pelogScale: Intervals = [1, 2, 4, 1, 4];
+export const prometheusScale: Intervals = [2, 2, 2, 3, 1, 2];
+export const wholeToneScale: Intervals = [2, 2, 2, 2, 2, 2];
+export const yoScale: Intervals = [2, 3, 2, 2, 3];
 
-// every built-in scale intervals as obj
+// every built-in scale interval as obj
 export const Scale = {
-  algerian,
-  altered,
-  arabic,
-  augmented,
-  balinese,
-  blues,
-  byzantine,
-  chinese,
-  chromatic,
-  doubleHarmonic,
-  enigmatic,
-  gypsyMajor,
-  harmonicMinor,
-  hirajoshi,
-  inSen,
-  japanese,
-  majorPentatonic,
-  major,
-  melodicMinor,
-  minorPentatonic,
-  mongolian,
-  naturalMinor,
-  pelog,
-  prometheus,
-  wholeTone,
-  yo,
+  algerian: algerianScale,
+  altered: alteredScale,
+  arabic: arabicScale,
+  augmented: augmentedScale,
+  balinese: balineseScale,
+  blues: bluesScale,
+  byzantine: byzantineScale,
+  chinese: chineseScale,
+  chromatic: chromaticScale,
+  doubleHarmonic: doubleHarmonicScale,
+  enigmatic: enigmaticScale,
+  gypsyMajor: gypsyMajorScale,
+  harmonicMinor: harmonicMinorScale,
+  hirajoshi: hirajoshiScale,
+  inSen: inSenScale,
+  japanese: japaneseScale,
+  majorPentatonic: majorPentatonicScale,
+  major: majorScale,
+  melodicMinor: melodicMinorScale,
+  minorPentatonic: minorPentatonicScale,
+  mongolian: mongolianScale,
+  naturalMinor: naturalMinorScale,
+  pelog: pelogScale,
+  prometheus: prometheusScale,
+  wholeTone: wholeToneScale,
+  yo: yoScale,
 };

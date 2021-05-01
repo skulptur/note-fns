@@ -1,134 +1,134 @@
 // short:
-export const root = 0 as const;
-export const R = root;
-export const semitone = 1 as const;
-export const S = semitone;
-export const tone = 2 as const;
-export const T = tone;
-export const tritone = 6 as const;
-export const TT = tritone;
-export const octave = 12 as const;
-export const O = octave;
+export const rootInterval = 0 as const;
+export const R = rootInterval;
+export const semitoneInterval = 1 as const;
+export const S = semitoneInterval;
+export const toneInterval = 2 as const;
+export const T = toneInterval;
+export const tritoneInterval = 6 as const;
+export const TT = tritoneInterval;
+export const octaveInterval = 12 as const;
+export const O = octaveInterval;
 
 // minor / major:
-export const perfectUnison = 0 as const;
-export const P1 = perfectUnison;
-export const minorSecond = 1 as const;
-export const m2 = minorSecond;
-export const majorSecond = 2 as const;
-export const M2 = majorSecond;
-export const minorThird = 3 as const;
-export const m3 = minorThird;
-export const majorThird = 4 as const;
-export const M3 = majorThird;
-export const perfectFourth = 5 as const;
-export const P4 = perfectFourth;
-export const perfectFifth = 7 as const;
-export const P5 = perfectFifth;
-export const minorSixth = 8 as const;
-export const m6 = minorSixth;
-export const majorSixth = 9 as const;
-export const M6 = majorSixth;
-export const minorSeventh = 10 as const;
-export const m7 = minorSeventh;
-export const majorSeventh = 11 as const;
-export const M7 = majorSeventh;
-export const perfectOctave = 12 as const;
-export const P8 = perfectOctave;
+export const perfectUnisonInterval = 0 as const;
+export const P1 = perfectUnisonInterval;
+export const minorSecondInterval = 1 as const;
+export const m2 = minorSecondInterval;
+export const majorSecondInterval = 2 as const;
+export const M2 = majorSecondInterval;
+export const minorThirdInterval = 3 as const;
+export const m3 = minorThirdInterval;
+export const majorThirdInterval = 4 as const;
+export const M3 = majorThirdInterval;
+export const perfectFourthInterval = 5 as const;
+export const P4 = perfectFourthInterval;
+export const perfectFifthInterval = 7 as const;
+export const P5 = perfectFifthInterval;
+export const minorSixthInterval = 8 as const;
+export const m6 = minorSixthInterval;
+export const majorSixthInterval = 9 as const;
+export const M6 = majorSixthInterval;
+export const minorSeventhInterval = 10 as const;
+export const m7 = minorSeventhInterval;
+export const majorSeventhInterval = 11 as const;
+export const M7 = majorSeventhInterval;
+export const perfectOctaveInterval = 12 as const;
+export const P8 = perfectOctaveInterval;
 
 // augmented / diminished:
-export const diminishedSecond = 0 as const;
-export const d2 = diminishedSecond;
-export const augmentedUnison = 1 as const;
-export const A1 = augmentedUnison;
-export const diminishedThird = 2 as const;
-export const d3 = diminishedThird;
-export const augmentedSecond = 3 as const;
-export const A2 = augmentedSecond;
-export const diminishedFourth = 4 as const;
-export const d4 = diminishedFourth;
-export const augmentedThird = 5 as const;
-export const A3 = augmentedThird;
-export const diminishedFifth = 6 as const;
-export const d5 = diminishedFifth;
-export const augmentedFourth = 6 as const;
-export const A4 = augmentedFourth;
-export const diminishedSixth = 7 as const;
-export const d6 = diminishedSixth;
-export const augmentedFifth = 8 as const;
-export const A5 = augmentedFifth;
-export const diminishedSeventh = 9 as const;
-export const d7 = diminishedSeventh;
-export const augmentedSixth = 10 as const;
-export const A6 = augmentedSixth;
-export const diminishedEighth = 11 as const;
-export const d8 = diminishedEighth;
-export const diminishedOctave = 11 as const;
-export const augmentedSeventh = 12 as const;
-export const A7 = augmentedSeventh;
+export const diminishedSecondInterval = 0 as const;
+export const d2 = diminishedSecondInterval;
+export const augmentedUnisonInterval = 1 as const;
+export const A1 = augmentedUnisonInterval;
+export const diminishedThirdInterval = 2 as const;
+export const d3 = diminishedThirdInterval;
+export const augmentedSecondInterval = 3 as const;
+export const A2 = augmentedSecondInterval;
+export const diminishedFourthInterval = 4 as const;
+export const d4 = diminishedFourthInterval;
+export const augmentedThirdInterval = 5 as const;
+export const A3 = augmentedThirdInterval;
+export const diminishedFifthInterval = 6 as const;
+export const d5 = diminishedFifthInterval;
+export const augmentedFourthInterval = 6 as const;
+export const A4 = augmentedFourthInterval;
+export const diminishedSixthInterval = 7 as const;
+export const d6 = diminishedSixthInterval;
+export const augmentedFifthInterval = 8 as const;
+export const A5 = augmentedFifthInterval;
+export const diminishedSeventhInterval = 9 as const;
+export const d7 = diminishedSeventhInterval;
+export const augmentedSixthInterval = 10 as const;
+export const A6 = augmentedSixthInterval;
+export const diminishedEighthInterval = 11 as const;
+export const d8 = diminishedEighthInterval;
+export const diminishedOctaveInterval = 11 as const;
+export const augmentedSeventhInterval = 12 as const;
+export const A7 = augmentedSeventhInterval;
 
 export const Interval = {
-  root,
+  rootInterval,
   R,
-  semitone,
+  semitoneInterval,
   S,
-  tone,
+  toneInterval,
   T,
-  tritone,
+  tritoneInterval,
   TT,
-  octave,
+  octaveInterval,
   O,
-  perfectUnison,
+  perfectUnisonInterval,
   P1,
-  minorSecond,
+  minorSecondInterval,
   m2,
-  majorSecond,
+  majorSecondInterval,
   M2,
-  minorThird,
+  minorThirdInterval,
   m3,
-  majorThird,
+  majorThirdInterval,
   M3,
-  perfectFourth,
+  perfectFourthInterval,
   P4,
-  perfectFifth,
+  perfectFifthInterval,
   P5,
-  minorSixth,
+  minorSixthInterval,
   m6,
-  majorSixth,
+  majorSixthInterval,
   M6,
-  minorSeventh,
+  minorSeventhInterval,
   m7,
-  majorSeventh,
+  majorSeventhInterval,
   M7,
-  perfectOctave,
+  perfectOctaveInterval,
   P8,
-  diminishedSecond,
+  diminishedSecondInterval,
   d2,
-  augmentedUnison,
+  augmentedUnisonInterval,
   A1,
-  diminishedThird,
+  diminishedThirdInterval,
   d3,
-  augmentedSecond,
+  augmentedSecondInterval,
   A2,
-  diminishedFourth,
+  diminishedFourthInterval,
   d4,
-  augmentedThird,
+  augmentedThirdInterval,
   A3,
-  diminishedFifth,
+  diminishedFifthInterval,
   d5,
-  augmentedFourth,
+  augmentedFourthInterval,
   A4,
-  diminishedSixth,
+  diminishedSixthInterval,
   d6,
-  augmentedFifth,
+  augmentedFifthInterval,
   A5,
-  diminishedSeventh,
+  diminishedSeventhInterval,
   d7,
-  augmentedSixth,
+  augmentedSixthInterval,
   A6,
-  diminishedEighth,
+  diminishedEighthInterval,
   d8,
-  diminishedOctave,
-  augmentedSeventh,
+  diminishedOctaveInterval,
+  augmentedSeventhInterval,
   A7,
 };

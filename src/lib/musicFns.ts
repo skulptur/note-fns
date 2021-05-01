@@ -84,8 +84,6 @@ import {
 import { Hertz } from './types/Hertz';
 import { Midi } from './types/Midi';
 
-export const chord = internalChord;
-
 export const notes = internalNOTES;
 
 export const accidentalToLetter = internalAccidentalToLetter as (
