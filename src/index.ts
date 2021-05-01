@@ -6,11 +6,11 @@ export { noteNameOffsets } from './lib/noteNameOffsets';
 export { noteNameToFrequency } from './lib/noteNameToFrequency';
 export { toMidi } from './lib/toMidi';
 export {
-  Chord,
-  Interval,
-  Mode,
-  NOTES,
-  Scale,
+  chord,
+  interval,
+  mode,
+  notes,
+  scale,
   accidentalToLetter,
   accidentalToSymbol,
   areEqual,

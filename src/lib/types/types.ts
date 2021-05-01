@@ -11,6 +11,11 @@ export type ExtractRangeType<T> = T extends Note<any, any, infer RangeType>
   ? RangeType
   : never;
 
+export type OptionalDirection = {
+    direction?: Direction;
+};
+
+export type Root = 'A' | 'B' |'C' |'D' |'E' |'F' |'G'
 
 export type NoteObject = {
     root: Note,

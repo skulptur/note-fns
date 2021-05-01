@@ -70,36 +70,56 @@ import {
   Accidental,
   AccidentalType,
   Direction,
+  Interval,
   Intervals,
   NoteIndex,
+  NoteObject,
+  Octave,
+  OptionalDirection,
+  Root,
   Scale,
   ScientificNote,
   ScientificNotes,
 } from './types/types';
+import { Hertz } from './types/Hertz';
+import { Midi } from './types/Midi';
+
 export const chord = internalChord;
+
 export const interval = internalInterval;
+
 export const mode = internalMode;
+
 export const notes = internalNOTES;
+
 export const scale = internalScale;
+
 export const accidentalToLetter = internalAccidentalToLetter as (
   note: ScientificNote
 ) => ScientificNote;
+
 export const accidentalToSymbol = internalAccidentalToSymbol as (
   note: ScientificNote
 ) => ScientificNote;
+
 export const areEqual = internalAreEqual as (note: ScientificNotes) => boolean;
+
 export const areIntervals = internalAreIntervals as (
   intervals: Intervals
 ) => boolean;
+
 export const areNotes = internalAreNotes as (notes: ScientificNotes) => boolean;
+
 export const createChord = internalCreateChord as (
   root: ScientificNote,
   chord: Intervals
 ) => ScientificNotes;
+
 export const createMelody = internalCreateMelody as (
   notes: ScientificNotes,
   pattern: number[]
 ) => ScientificNotes;
+
 export type CreateScaleOptions = {
   includeRootEnd: boolean;
 };
@@ -108,66 +128,203 @@ export const createScale = internalCreateScale as (
   scale: Intervals,
   options?: CreateScaleOptions
 ) => ScientificNotes;
+
 export const flatToSharp = internalFlatToSharp as (
   note: ScientificNote
 ) => ScientificNote;
+
 export const getAccidental = internalGetAccidental as (
   note: ScientificNote
 ) => Accidental | AccidentalType;
+
 export const getChromaticCPosition = internalGetChromaticCPosition as (
   note: ScientificNote
 ) => NoteIndex;
-export type GetDominantOptions = {
-  direction: Direction;
-};
+
 export const getDominant = internalGetDominant as (
   diatonicScale: Scale,
-  options: GetDominantOptions
+  options: OptionalDirection
 ) => ScientificNote;
-export const getIntervals = internalGetIntervals;
-export const getLeadingTone = internalGetLeadingTone;
-export const getMediant = internalGetMediant;
-export const getNote = internalGetNote;
-export const getNoteOnDegree = internalGetNoteOnDegree;
-export const getOctave = internalGetOctave;
-export const getRoot = internalGetRoot;
-export const getSubdominant = internalGetSubdominant;
-export const getSubmediant = internalGetSubmediant;
-export const getSupertonic = internalGetSupertonic;
-export const getTonic = internalGetTonic;
-export const hasAccidental = internalHasAccidental;
-export const hasAccidentalLetter = internalHasAccidentalLetter;
-export const hasAccidentalSymbol = internalHasAccidentalSymbol;
-export const hasIntervalAmount = internalHasIntervalAmount;
-export const hasOctave = internalHasOctave;
-export const haveSameOctave = internalHaveSameOctave;
-export const isAnhemitonic = internalIsAnhemitonic;
-export const isAscending = internalIsAscending;
-export const isCohemitonic = internalIsCohemitonic;
-export const isDescending = internalIsDescending;
-export const isDiatonic = internalIsDiatonic;
-export const isFifth = internalIsFifth;
-export const isFlat = internalIsFlat;
-export const isHemitonic = internalIsHemitonic;
-export const isHeptatonic = internalIsHeptatonic;
-export const isHexatonic = internalIsHexatonic;
-export const isMode = internalIsMode;
-export const isNatural = internalIsNatural;
-export const isNote = internalIsNote;
-export const isOctatonic = internalIsOctatonic;
-export const isOctave = internalIsOctave;
-export const isPentatonic = internalIsPentatonic;
-export const isScale = internalIsScale;
-export const isSemitone = internalIsSemitone;
-export const isSharp = internalIsSharp;
-export const isTone = internalIsTone;
-export const isTriad = internalIsTriad;
-export const normalize = internalNormalize;
-export const noteToFrequency = internalNoteToFrequency;
-export const noteToMidi = internalNoteToMidi;
-export const noteToObject = internalNoteToObject;
-export const objectToNote = internalObjectToNote;
-export const sharpToFlat = internalSharpToFlat;
-export const transferAccidental = internalTransferAccidental;
-export const transferStyle = internalTransferStyle;
-export const transpose = internalTranspose;
+
+export type GetIntervalsOptioms = {
+  fromRoot?: boolean;
+  direction?: Direction;
+};
+export const getIntervals = internalGetIntervals as (
+  note: ScientificNote,
+  note2: ScientificNote,
+  options: GetIntervalsOptioms
+) => Array<number>;
+
+export const getLeadingTone = internalGetLeadingTone as (
+  diatonicScale: Scale,
+  options: OptionalDirection
+) => ScientificNote;
+
+export const getMediant = internalGetMediant as (
+  diatonicScale: Scale,
+  options: OptionalDirection
+) => ScientificNote;
+
+export const getNote = internalGetNote as (note: ScientificNote) => string; // also note but not sure the type;
+
+export const getNoteOnDegree = internalGetNoteOnDegree as (
+  scale: Scale,
+  degree: number,
+  options: OptionalDirection
+) => ScientificNote;
+
+export const getOctave = internalGetOctave as (note: ScientificNote) => Octave;
+
+export const getRoot = internalGetRoot as (note: ScientificNote) => Root;
+
+export const getSubdominant = internalGetSubdominant as (
+  diatonicScale: Scale,
+  options: OptionalDirection
+) => ScientificNote;
+
+export const getSubmediant = internalGetSubmediant as (
+  diatonicScale: Scale,
+  options: OptionalDirection
+) => ScientificNote;
+
+export const getSupertonic = internalGetSupertonic as (
+  diatonicScale: Scale,
+  options: OptionalDirection
+) => ScientificNote;
+
+export const getTonic = internalGetTonic as (
+  diatonicScale: Scale,
+  options: OptionalDirection
+) => ScientificNote;
+
+export const hasAccidental = (internalHasAccidental as (
+  note: ScientificNote
+) => boolean) as (note: ScientificNote) => boolean;
+
+export const hasAccidentalLetter = internalHasAccidentalLetter as (
+  note: ScientificNote
+) => boolean;
+
+export const hasAccidentalSymbol = internalHasAccidentalSymbol as (
+  note: ScientificNote
+) => boolean;
+
+export const hasIntervalAmount = internalHasIntervalAmount as (
+  note: ScientificNote
+) => boolean;
+
+export const hasOctave = internalHasOctave as (note: ScientificNote) => boolean;
+
+export const haveSameOctave = internalHaveSameOctave as (
+  note: ScientificNote
+) => boolean;
+
+export const isAnhemitonic = internalIsAnhemitonic as (
+  note: ScientificNote
+) => boolean;
+
+export const isAscending = internalIsAscending as (
+  note: ScientificNote
+) => boolean;
+
+export const isCohemitonic = internalIsCohemitonic as (
+  note: ScientificNote
+) => boolean;
+
+export const isDescending = internalIsDescending as (
+  note: ScientificNote
+) => boolean;
+
+export const isDiatonic = internalIsDiatonic as (
+  note: ScientificNote
+) => boolean;
+
+export const isFifth = internalIsFifth as (note: ScientificNote) => boolean;
+
+export const isFlat = internalIsFlat as (note: ScientificNote) => boolean;
+
+export const isHemitonic = internalIsHemitonic as (
+  note: ScientificNote
+) => boolean;
+
+export const isHeptatonic = internalIsHeptatonic as (
+  note: ScientificNote
+) => boolean;
+
+export const isHexatonic = internalIsHexatonic as (
+  note: ScientificNote
+) => boolean;
+
+export const isMode = internalIsMode as (note: ScientificNote) => boolean;
+
+export const isNatural = internalIsNatural as (note: ScientificNote) => boolean;
+
+export const isNote = internalIsNote as (note: ScientificNote) => boolean;
+
+export const isOctatonic = internalIsOctatonic as (
+  note: ScientificNote
+) => boolean;
+
+export const isOctave = internalIsOctave as (note: ScientificNote) => boolean;
+
+export const isPentatonic = internalIsPentatonic as (
+  note: ScientificNote
+) => boolean;
+
+export const isScale = internalIsScale as (note: ScientificNote) => boolean;
+
+export const isSemitone = internalIsSemitone as (
+  note: ScientificNote
+) => boolean;
+
+export const isSharp = internalIsSharp as (note: ScientificNote) => boolean;
+
+export const isTone = internalIsTone as (note: ScientificNote) => boolean;
+
+export const isTriad = internalIsTriad as (note: ScientificNote) => boolean;
+
+export const normalize = internalNormalize as (
+  scale: Scale,
+  options: OptionalDirection
+) => Scale;
+
+export type NoteToFrequencyProps = { standard: Hertz };
+export const noteToFrequency = internalNoteToFrequency as (
+  note: ScientificNote,
+  options: NoteToFrequencyProps
+) => Hertz;
+
+export type NoteToMidiProps = { standard: Hertz };
+export const noteToMidi = internalNoteToMidi as (
+  note: ScientificNote,
+  options: NoteToMidiProps
+) => Midi;
+
+export const noteToObject = internalNoteToObject as (
+  scientificNote: ScientificNote
+) => NoteObject;
+
+export const objectToNote = internalObjectToNote as (
+  noteObject: NoteObject
+) => ScientificNote;
+
+export const sharpToFlat = internalSharpToFlat as (
+  note: ScientificNote
+) => ScientificNote;
+
+export const transferAccidental = internalTransferAccidental as (
+  note: ScientificNote,
+  referenceNote: ScientificNote
+) => ScientificNote;
+
+export const transferStyle = internalTransferStyle as (
+  note: ScientificNote,
+  referenceNote: ScientificNote
+) => ScientificNote;
+
+export const transpose = internalTranspose as (
+  note: ScientificNote,
+  interval: Interval,
+  reference?: ScientificNote
+) => ScientificNote;
