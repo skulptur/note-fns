@@ -68,7 +68,7 @@ export {
 } from './lib/musicFns';
 
 export {
-  ScalesByName,
+  Scales,
   algerianScale,
   alteredScale,
   arabicScale,
@@ -98,7 +98,7 @@ export {
 } from './lib/scales';
 
 export {
-  IntervalsByName,
+  Intervals,
   rootInterval,
   R,
   semitoneInterval,
@@ -165,7 +165,7 @@ export {
 } from './lib/intervals';
 
 export {
-  ModesByName,
+  Modes,
   ionianMode,
   dorianMode,
   phrygianMode,
@@ -176,7 +176,7 @@ export {
 } from './lib/modes';
 
 export {
-  ChordsByName,
+  Chords,
   augmentedChord,
   diminishedChord,
   majorSeventhChord,
