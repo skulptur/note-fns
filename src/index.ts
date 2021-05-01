@@ -1,24 +1,18 @@
-export { trim } from './trim';
-export { concat } from './clip/concat';
-export { getEndTime as getNoteOffTime } from './note/getEndTime';
-export { getTotalTime } from './note/getTotalTime';
-export { humanizeTime } from './clip/humanizeTime';
-export { isClip } from './predicates/isClip';
-export { loopClip } from './clip/loopClip';
-export { makeClip, Clip } from './clip/makeClip';
-export { makeNote, Note } from './note/makeNote';
-export { merge } from './clip/merge';
-export { limitPolyphony } from './clip/limitPolyphony';
-export { offsetPitch } from './note/offsetPitch';
-export { offsetTime } from './note/offsetTime';
-export { quantize } from './clip/quantize';
-export { reverse } from './clip/reverse';
-export { saveMidi } from './saveMidi';
-export { setDuration } from './setDuration';
-export { setName } from './setName';
-export { setTime } from './setTime';
-export { setVelocity } from './setVelocity';
-export { simpleDelay } from './clip/simpleDelay';
-export { splitNote } from './note/splitNote';
-export { timeScale } from './clip/timeScale';
-export { timeWarp } from './clip/timeWarp';
+export { getMiddleCFrequency } from './lib/getMiddleCFrequency';
+export { mapData } from './lib/mapData';
+export { mapRange } from './lib/mapRange';
+export { mapValue } from './lib/mapValue';
+export { noteNameOffsets } from './lib/noteNameOffsets';
+export { noteNameToFrequency } from './lib/noteNameToFrequency';
+export { toMidi } from './lib/toMidi';
+export {
+  Midi,
+  Range,
+  CommonData,
+  Note,
+  ExtractValue,
+  ExtractData,
+  ExtractRangeType,
+  NoteName,
+  Hertz,
+} from './lib/types';
