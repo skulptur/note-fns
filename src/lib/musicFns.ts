@@ -1,8 +1,4 @@
-// @ts-ignore
 import {
-  Chord as internalChord,
-  Interval as internalInterval,
-  Mode as internalMode,
   NOTES as internalNOTES,
   accidentalToLetter as internalAccidentalToLetter,
   accidentalToSymbol as internalAccidentalToSymbol,
@@ -84,7 +80,7 @@ import {
 import { Hertz } from './types/Hertz';
 import { Midi } from './types/Midi';
 
-export const notes = internalNOTES;
+export const noteVariations = internalNOTES;
 
 export const accidentalToLetter = internalAccidentalToLetter as (
   note: ScientificNote
