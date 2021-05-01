@@ -7,6 +7,7 @@ import {
   middleOctave,
 } from './getMiddleCFrequency';
 
+// TODO: duplicate of music-fns noteToFrequency
 export const noteNameToFrequency = (
   name: NoteName,
   middleAFrequency: Hertz = defaultMiddleAFrequency as Hertz
