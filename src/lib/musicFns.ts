@@ -69,6 +69,7 @@ import {
 import {
   Accidental,
   AccidentalType,
+  Chord,
   Direction,
   Interval,
   Intervals,
@@ -211,78 +212,94 @@ export const hasAccidentalSymbol = internalHasAccidentalSymbol as (
 ) => boolean;
 
 export const hasIntervalAmount = internalHasIntervalAmount as (
-  note: ScientificNote
+  scale: Scale,
+  intervalAmount: number,
+  options: OptionalDirection
 ) => boolean;
 
 export const hasOctave = internalHasOctave as (note: ScientificNote) => boolean;
 
 export const haveSameOctave = internalHaveSameOctave as (
-  note: ScientificNote
+  notes: ScientificNotes
 ) => boolean;
 
 export const isAnhemitonic = internalIsAnhemitonic as (
-  note: ScientificNote
+  scale: Scale,
+  options: OptionalDirection
 ) => boolean;
 
 export const isAscending = internalIsAscending as (
-  note: ScientificNote
+  scale: Scale,
+  options: OptionalDirection
 ) => boolean;
 
 export const isCohemitonic = internalIsCohemitonic as (
-  note: ScientificNote
+  scale: Scale,
+  options: OptionalDirection
 ) => boolean;
 
 export const isDescending = internalIsDescending as (
-  note: ScientificNote
+  scale: Scale,
+  options: OptionalDirection
 ) => boolean;
 
 export const isDiatonic = internalIsDiatonic as (
-  note: ScientificNote
+  scale: Scale,
+  options: OptionalDirection
 ) => boolean;
 
-export const isFifth = internalIsFifth as (note: ScientificNote) => boolean;
+export const isFifth = internalIsFifth as (interval: Interval) => boolean;
 
 export const isFlat = internalIsFlat as (note: ScientificNote) => boolean;
 
 export const isHemitonic = internalIsHemitonic as (
-  note: ScientificNote
+  scale: Scale,
+  options: OptionalDirection
 ) => boolean;
 
 export const isHeptatonic = internalIsHeptatonic as (
-  note: ScientificNote
+  scale: Scale,
+  options: OptionalDirection
 ) => boolean;
 
 export const isHexatonic = internalIsHexatonic as (
-  note: ScientificNote
+  scale: Scale,
+  options: OptionalDirection
 ) => boolean;
 
-export const isMode = internalIsMode as (note: ScientificNote) => boolean;
+export const isMode = internalIsMode as (
+  scale: Scale,
+  options: OptionalDirection
+) => boolean;
 
 export const isNatural = internalIsNatural as (note: ScientificNote) => boolean;
 
 export const isNote = internalIsNote as (note: ScientificNote) => boolean;
 
 export const isOctatonic = internalIsOctatonic as (
-  note: ScientificNote
+  scale: Scale,
+  options: OptionalDirection
 ) => boolean;
 
-export const isOctave = internalIsOctave as (note: ScientificNote) => boolean;
+export const isOctave = internalIsOctave as (interval: Interval) => boolean;
 
 export const isPentatonic = internalIsPentatonic as (
-  note: ScientificNote
+  scale: Scale,
+  options: OptionalDirection
 ) => boolean;
 
-export const isScale = internalIsScale as (note: ScientificNote) => boolean;
-
-export const isSemitone = internalIsSemitone as (
-  note: ScientificNote
+export const isScale = internalIsScale as (
+  scale: Scale,
+  options: OptionalDirection
 ) => boolean;
+
+export const isSemitone = internalIsSemitone as (interval: Interval) => boolean;
 
 export const isSharp = internalIsSharp as (note: ScientificNote) => boolean;
 
-export const isTone = internalIsTone as (note: ScientificNote) => boolean;
+export const isTone = internalIsTone as (interval: Interval) => boolean;
 
-export const isTriad = internalIsTriad as (note: ScientificNote) => boolean;
+export const isTriad = internalIsTriad as (chord: Chord) => boolean;
 
 export const normalize = internalNormalize as (
   scale: Scale,
