@@ -4,7 +4,6 @@ import {
   Interval as internalInterval,
   Mode as internalMode,
   NOTES as internalNOTES,
-  Scale as internalScale,
   accidentalToLetter as internalAccidentalToLetter,
   accidentalToSymbol as internalAccidentalToSymbol,
   areEqual as internalAreEqual,
@@ -74,7 +73,7 @@ import {
   Interval,
   Intervals,
   NoteIndex,
-  NoteObject,
+  NoteDescription,
   Octave,
   OptionalDirection,
   Root,
@@ -92,8 +91,6 @@ export const interval = internalInterval;
 export const mode = internalMode;
 
 export const notes = internalNOTES;
-
-export const scale = internalScale;
 
 export const accidentalToLetter = internalAccidentalToLetter as (
   note: ScientificNote
@@ -320,10 +317,10 @@ export const noteToMidi = internalNoteToMidi as (
 
 export const noteToObject = internalNoteToObject as (
   scientificNote: ScientificNote
-) => NoteObject;
+) => NoteDescription;
 
 export const objectToNote = internalObjectToNote as (
-  noteObject: NoteObject
+  noteObject: NoteDescription
 ) => ScientificNote;
 
 export const sharpToFlat = internalSharpToFlat as (

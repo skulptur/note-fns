@@ -1,5 +1,4 @@
-import { ExtractValue } from './types/types';
-import { Note } from './types/Note';
+import { ExtractValue, Note } from './types/Note';
 
 export const mapValue = <T extends Note>(
   note: T,
