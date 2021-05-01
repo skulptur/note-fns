@@ -67,7 +67,7 @@ export const diminishedOctaveInterval = 11 as const;
 export const augmentedSeventhInterval = 12 as const;
 export const A7 = augmentedSeventhInterval;
 
-export const Interval = {
+export const IntervalsByName = {
   rootInterval,
   R,
   semitoneInterval,

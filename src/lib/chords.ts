@@ -9,7 +9,7 @@ export const minorSeventhChord: Intervals = [0, 3, 7, 10] as const;
 export const minorChord: Intervals = [0, 3, 7] as const;
 export const seventhChord: Intervals = [0, 4, 7, 10] as const;
 
-export const Chord = {
+export const ChordsByName = {
   augmented: augmentedChord,
   diminished: diminishedChord,
   majorSeventh: majorSeventhChord,

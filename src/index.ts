@@ -2,7 +2,7 @@ export { getMiddleCFrequency } from './lib/getMiddleCFrequency';
 export { mapData } from './lib/container/mapData';
 export { mapRange } from './lib/container/mapRange';
 export { mapValue } from './lib/container/mapValue';
-export { noteNameOffsets } from './lib/noteNameOffsets';
+export { noteInterval } from './lib/noteInterval';
 export { toMidi } from './lib/toMidi';
 export {
   noteVariations,
@@ -68,7 +68,7 @@ export {
 } from './lib/musicFns';
 
 export {
-  Scale,
+  ScalesByName,
   algerianScale,
   alteredScale,
   arabicScale,
@@ -98,7 +98,7 @@ export {
 } from './lib/scales';
 
 export {
-  Interval,
+  IntervalsByName,
   rootInterval,
   R,
   semitoneInterval,
@@ -165,7 +165,7 @@ export {
 } from './lib/intervals';
 
 export {
-  Mode,
+  ModesByName,
   ionianMode,
   dorianMode,
   phrygianMode,
@@ -176,7 +176,7 @@ export {
 } from './lib/modes';
 
 export {
-  Chord,
+  ChordsByName,
   augmentedChord,
   diminishedChord,
   majorSeventhChord,

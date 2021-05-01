@@ -1,4 +1,4 @@
-export const noteNameOffsets = {
+export const noteInterval = {
   'B#': 0,
   C: 0,
   'C#': 1,

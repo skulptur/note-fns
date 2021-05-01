@@ -29,9 +29,9 @@ console.log(getNote('A#4')); // 'A#'
 In note-fns I opted to export each scale individually as well as an object containing all of them. Example:
 
 ```typescript
-import { Scale, naturalMinorScale } from 'note-fns';
+import { ScalesByName, naturalMinorScale } from 'note-fns';
 
-console.log(Scale); // logs all built-in scales with camelCase keys.
+console.log(ScalesByName); // logs all built-in scales with camelCase keys.
 console.log(naturalMinorScale); // logs array of interval
 ```
 
@@ -40,9 +40,9 @@ console.log(naturalMinorScale); // logs array of interval
 Similarly as with scales, note-fns exports the constant directly as well as an object containing all of them. Example:
 
 ```typescript
-import { Mode, phrygianMode } from 'note-fns';
+import { ModesByName, phrygianMode } from 'note-fns';
 
-console.log(Mode); // logs all modes with camelCase keys.
+console.log(ModesByName); // logs all modes with camelCase keys.
 console.log(phrygianMode); // [1, 2, 2, 2, 1, 2, 2]
 ```
 
@@ -51,8 +51,8 @@ console.log(phrygianMode); // [1, 2, 2, 2, 1, 2, 2]
 Example:
 
 ```typescript
-import { Interval, perfectFithInterval } from 'note-fns';
+import { IntervalsByName, perfectFithInterval } from 'note-fns';
 
-console.log(Interval); // logs all intervals with camelCase keys.
+console.log(IntervalsByName); // logs all intervals with camelCase keys.
 console.log(perfectFithInterval); // 7
 ```

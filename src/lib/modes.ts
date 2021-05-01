@@ -8,7 +8,7 @@ export const mixolydianMode: Intervals = [2, 2, 1, 2, 2, 1, 2] as const;
 export const aeolianMode: Intervals = [2, 1, 2, 2, 1, 2, 2] as const;
 export const locrianMode: Intervals = [1, 2, 2, 1, 2, 2, 2] as const;
 
-export const Mode = {
+export const ModesByName = {
   ionian: ionianMode,
   dorian: dorianMode,
   phrygian: phrygianMode,

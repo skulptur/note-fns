@@ -1,6 +1,6 @@
 import { Hertz } from './types/Hertz';
 import { NoteName } from './types/NoteName';
-import { noteNameOffsets } from './noteNameOffsets';
+import { noteInterval } from './noteInterval';
 import {
   defaultMiddleAFrequency,
   getMiddleCFrequency,
@@ -13,7 +13,7 @@ export const noteNameToFrequency = (
   middleAFrequency: Hertz = defaultMiddleAFrequency as Hertz
 ): Hertz => {
   const couple = name.split(/(\d+)/);
-  const distance = noteNameOffsets[couple[0] as NoteName];
+  const distance = noteInterval[couple[0] as NoteName];
   const octaveDiff = (parseInt(couple[1], 10) || middleOctave) - middleOctave;
   const freq =
     getMiddleCFrequency(middleAFrequency) *

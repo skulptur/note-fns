@@ -28,7 +28,7 @@ export const wholeToneScale: Intervals = [2, 2, 2, 2, 2, 2];
 export const yoScale: Intervals = [2, 3, 2, 2, 3];
 
 // every built-in scale interval as obj
-export const Scale = {
+export const ScalesByName = {
   algerian: algerianScale,
   altered: alteredScale,
   arabic: arabicScale,
