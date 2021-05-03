@@ -4,6 +4,8 @@ export { toMidi } from './lib/toMidi'
 
 export {
   Root,
+  SharpNote,
+  FlatNote,
   NoteName,
   NoteDescription,
   Direction,

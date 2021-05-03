@@ -6,28 +6,10 @@ export type OptionalDirection = {
 
 export type Root = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G'
 
-export type NoteName =
-  | 'B#'
-  | 'C'
-  | 'C#'
-  | 'Db'
-  | 'D'
-  | 'D#'
-  | 'Eb'
-  | 'E'
-  | 'Fb'
-  | 'E#'
-  | 'F'
-  | 'F#'
-  | 'Gb'
-  | 'G'
-  | 'G#'
-  | 'Ab'
-  | 'A'
-  | 'A#'
-  | 'Bb'
-  | 'B'
-  | 'Cb'
+export type SharpNote = 'B#' | 'C#' | 'D#' | 'E#' | 'F#' | 'G#' | 'A#'
+export type FlatNote = 'Db' | 'Eb' | 'Fb' | 'Gb' | 'Ab' | 'Bb' | 'Cb'
+
+export type NoteName = Root | SharpNote | FlatNote
 
 export type NoteDescription = {
   root: NoteName
