@@ -82,14 +82,23 @@ import { Midi } from './types/Midi';
 
 export const noteVariations = internalNOTES;
 
+/**
+ * Converts a note which has an accidental as a symbol (♭, ♯) to a note with the accidental as a letter (b, #).
+ * */
 export const accidentalToLetter = internalAccidentalToLetter as (
   note: ScientificNote
 ) => ScientificNote;
 
+/**
+ * Converts a note which has an accidental as a letter (b, #) to a note with the accidental as a symbol (♭, ♯).
+ * */
 export const accidentalToSymbol = internalAccidentalToSymbol as (
   note: ScientificNote
 ) => ScientificNote;
 
+/**
+ * Returns true if the provided notes are the same notes.
+ * */
 export const areEqual = internalAreEqual as (note: ScientificNotes) => boolean;
 
 export const areIntervals = internalAreIntervals as (
@@ -98,11 +107,17 @@ export const areIntervals = internalAreIntervals as (
 
 export const areNotes = internalAreNotes as (notes: ScientificNotes) => boolean;
 
+/**
+ * Creates a chord by providing a root note and intervals (use Chords).
+ * */
 export const createChord = internalCreateChord as (
   root: ScientificNote,
   chord: Intervals
 ) => ScientificNotes;
 
+/**
+ * Creates a melody using a provided array of notes and a pattern.
+ * */
 export const createMelody = internalCreateMelody as (
   notes: ScientificNotes,
   pattern: number[]
@@ -111,24 +126,42 @@ export const createMelody = internalCreateMelody as (
 export type CreateScaleOptions = {
   includeRootEnd: boolean;
 };
+
+/**
+ * Creates a scale (or mode) by providing a root note and an intervals (use the Scale or Mode constant).
+ * You can provide includeRootEnd to also include the root note transposed an octave up.
+ * */
 export const createScale = internalCreateScale as (
   root: ScientificNote,
   scale: Intervals,
   options?: CreateScaleOptions
 ) => ScientificNotes;
 
+/**
+ * Converts a flat to its sharp equivalent, this function preserves the accidental style (letter or symbol).
+ * If no flat is found the function returns the unmodified input.
+ * */
 export const flatToSharp = internalFlatToSharp as (
   note: ScientificNote
 ) => ScientificNote;
 
+/**
+ * Returns the accidental (or undefined) from a note.
+ * */
 export const getAccidental = internalGetAccidental as (
   note: ScientificNote
 ) => Accidental | AccidentalType;
 
+/**
+ * Returns the (0-indexed) position of the specific root within a chromatic C scale (equals the NOTES constant).
+ * */
 export const getChromaticCPosition = internalGetChromaticCPosition as (
   note: ScientificNote
 ) => NoteIndex;
 
+/**
+ * Returns the note on scale degree 5 in a diatonic scale.
+ * */
 export const getDominant = internalGetDominant as (
   diatonicScale: Scale,
   options: OptionalDirection
@@ -138,83 +171,141 @@ export type GetIntervalsOptioms = {
   fromRoot?: boolean;
   direction?: Direction;
 };
+
+/**
+ * Returns one or more intervals between the provided notes. You can pass fromRoot to calculate the interval from the first note (= root).
+ * */
 export const getIntervals = internalGetIntervals as (
   note: ScientificNote,
   note2: ScientificNote,
   options: GetIntervalsOptioms
 ) => Array<number>;
 
+/**
+ * Returns the note on scale degree 7 in a diatonic scale.
+ * */
 export const getLeadingTone = internalGetLeadingTone as (
   diatonicScale: Scale,
   options: OptionalDirection
 ) => ScientificNote;
 
+/**
+ * Returns the note on scale degree 3 in a diatonic scale.
+ * */
 export const getMediant = internalGetMediant as (
   diatonicScale: Scale,
   options: OptionalDirection
 ) => ScientificNote;
 
+/**
+ * Returns the full note (note + accidental) from a note.
+ */
 export const getNote = internalGetNote as (note: ScientificNote) => string; // also note but not sure the type;
 
+/**
+ * Returns the note on the provided scale degree.
+ * */
 export const getNoteOnDegree = internalGetNoteOnDegree as (
   scale: Scale,
   degree: number,
   options: OptionalDirection
 ) => ScientificNote;
 
+/**
+ * Returns the octave information (or undefined) from a note.
+ * */
 export const getOctave = internalGetOctave as (note: ScientificNote) => Octave;
 
+/**
+ * Returns the root (only note, no accidental) from a note.
+ * */
 export const getRoot = internalGetRoot as (note: ScientificNote) => Root;
 
+/**
+ * Returns the note on scale degree 4 in a diatonic scale.
+ * */
 export const getSubdominant = internalGetSubdominant as (
   diatonicScale: Scale,
   options: OptionalDirection
 ) => ScientificNote;
 
+/**
+ * Returns the note on scale degree 6 in a diatonic scale.
+ * */
 export const getSubmediant = internalGetSubmediant as (
   diatonicScale: Scale,
   options: OptionalDirection
 ) => ScientificNote;
 
+/**
+ * Returns the note on scale degree 2 in a diatonic scale.
+ * */
 export const getSupertonic = internalGetSupertonic as (
   diatonicScale: Scale,
   options: OptionalDirection
 ) => ScientificNote;
 
+/**
+ * Returns the note on scale degree 1 in a diatonic scale.
+ * */
 export const getTonic = internalGetTonic as (
   diatonicScale: Scale,
   options: OptionalDirection
 ) => ScientificNote;
 
+/**
+ * Returns true if the note has an accidental as a symbol (♭, ♯).
+ * */
 export const hasAccidental = (internalHasAccidental as (
   note: ScientificNote
 ) => boolean) as (note: ScientificNote) => boolean;
 
+/**
+ * Returns true if the note has an accidental as a letter (b, #).
+ * */
 export const hasAccidentalLetter = internalHasAccidentalLetter as (
   note: ScientificNote
 ) => boolean;
 
+/**
+ * Returns true if the note has an accidental as a symbol (♭, ♯).
+ * */
 export const hasAccidentalSymbol = internalHasAccidentalSymbol as (
   note: ScientificNote
 ) => boolean;
 
+/**
+ * Returns true if a scale has the provided interval amount.
+ * */
 export const hasIntervalAmount = internalHasIntervalAmount as (
   scale: Scale,
   intervalAmount: number,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true if the note has octave information.
+ * */
 export const hasOctave = internalHasOctave as (note: ScientificNote) => boolean;
 
+/**
+ * Returns true if all notes share the same octave information.
+ * */
 export const haveSameOctave = internalHaveSameOctave as (
   notes: ScientificNotes
 ) => boolean;
 
+/**
+ * Returns true if the scale is anhemitonic (does not contain semitones).
+ * */
 export const isAnhemitonic = internalIsAnhemitonic as (
   scale: Scale,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true if the scale is ascending.
+ * */
 export const isAscending = internalIsAscending as (
   scale: Scale,
   options: OptionalDirection
