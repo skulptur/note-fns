@@ -311,113 +311,211 @@ export const isAscending = internalIsAscending as (
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true if the scale is cohemitonic (contains 2 or more semitones that appear consecutively in scale order).
+ * */
 export const isCohemitonic = internalIsCohemitonic as (
   scale: Scale,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true if the scale is descending.
+ * */
 export const isDescending = internalIsDescending as (
   scale: Scale,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true if the scale is diatonic (5 tones & 2 semitones, where the semitones are separated at least 2 steps from each other).
+ * */
 export const isDiatonic = internalIsDiatonic as (
   scale: Scale,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true if the interval is a fifth (diminished, perfect or augmented) (6, 7, 8).
+ * */
 export const isFifth = internalIsFifth as (interval: Interval) => boolean;
 
+/**
+ * Returns true if the note is flat (b, ♭).
+ * */
 export const isFlat = internalIsFlat as (note: ScientificNote) => boolean;
 
+/**
+ * Returns true if the scale is hemitonic (contains 1 or more semitones).
+ * */
 export const isHemitonic = internalIsHemitonic as (
   scale: Scale,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true if the scale is heptatonic (7 notes per octave).
+ * */
 export const isHeptatonic = internalIsHeptatonic as (
   scale: Scale,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true if the scale is hexatonic (6 notes per octave).
+ * */
 export const isHexatonic = internalIsHexatonic as (
   scale: Scale,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true when the provided array of notes is a mode (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian or Locrian).
+ * */
 export const isMode = internalIsMode as (
   scale: Scale,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true if the note is natural (no accidental).
+ * */
 export const isNatural = internalIsNatural as (note: ScientificNote) => boolean;
 
+/**
+ * Returns true if the provided value is a valid note in scientific pitch notation.
+ * */
 export const isNote = internalIsNote as (note: ScientificNote) => boolean;
 
+/**
+ * Returns true if the scale is octatonic (8 notes per octave).
+ * */
 export const isOctatonic = internalIsOctatonic as (
   scale: Scale,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true if the interval is an octave (12).
+ * */
 export const isOctave = internalIsOctave as (interval: Interval) => boolean;
 
+/**
+ * Returns true if the scale is pentatonic (5 notes per octave).
+ * */
 export const isPentatonic = internalIsPentatonic as (
   scale: Scale,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true when the array of notes is a scale.
+ * */
 export const isScale = internalIsScale as (
   scale: Scale,
   options: OptionalDirection
 ) => boolean;
 
+/**
+ * Returns true if the interval is a semitone (1).
+ * */
 export const isSemitone = internalIsSemitone as (interval: Interval) => boolean;
 
+/**
+ * Returns true if the note is sharp (#, ♯).
+ * */
 export const isSharp = internalIsSharp as (note: ScientificNote) => boolean;
 
+/**
+ * Returns true if the interval is a tone (2).
+ * */
 export const isTone = internalIsTone as (interval: Interval) => boolean;
 
+/**
+ * Returns true if the chord is a triad (a set of three notes that can be stacked in thirds).
+ * */
 export const isTriad = internalIsTriad as (chord: Chord) => boolean;
 
+/**
+ * Normalize a scale by making sure it's ascending & has a root end.
+ * */
 export const normalize = internalNormalize as (
   scale: Scale,
   options: OptionalDirection
 ) => Scale;
 
 export type NoteToFrequencyProps = { standard: Hertz };
+/**
+ * Converts a note to a frequency (in Hz). You can use a different base frequency for A4 via standard.
+ * */
 export const noteToFrequency = internalNoteToFrequency as (
   note: ScientificNote,
   options: NoteToFrequencyProps
 ) => Hertz;
 
 export type NoteToMidiProps = { standard: Hertz };
+/**
+ * Converts a note to its MIDI number. C4 = 60 in our implementation. You can provide a different middle C via standard.
+ * */
 export const noteToMidi = internalNoteToMidi as (
   note: ScientificNote,
   options: NoteToMidiProps
 ) => Midi;
 
+/**
+ * The object can contain the following keys:
+ * root: a root note (C, D, E, F, G, A, B)
+ * [accidental]: SHARP, FLAT
+ * [accidentalType]: SYMBOL, LETTER
+ * [octave]: number
+ * */
 export const noteToNoteDescription = internalNoteToObject as (
   scientificNote: ScientificNote
 ) => NoteDescription;
 
+/**
+ * Converts an object describing the note to a note.
+
+ * The object can contain following keys:
+
+ * root: a root note (C, D, E, F, G, A, B)
+ * [accidental]: SHARP / FLAT
+ * [accidentalType]: SYMBOL / LETTER
+ * [octave]: number
+ * */
 export const noteDescriptionToNote = internalObjectToNote as (
   noteObject: NoteDescription
 ) => ScientificNote;
 
+/**
+ * Converts a sharp to its flat equivalent, this function preserves the accidental style (letter or symbol).
+ * If no sharp is found the function returns the unmodified input.
+ * */
 export const sharpToFlat = internalSharpToFlat as (
   note: ScientificNote
 ) => ScientificNote;
 
+/**
+ * Transfer the accidental type (flat or sharp) from a provided reference note
+ * In this example, we've converted F♯3 to Gb3 because the reference note is Bb4 (a flat instead of sharp).
+ * */
 export const transferAccidental = internalTransferAccidental as (
   note: ScientificNote,
   referenceNote: ScientificNote
 ) => ScientificNote;
 
+/**
+ * Combination of transferAccidental and transferAccidentalStyle.
+ * In this example, we've converted F#3 to G♭3 because the reference note is B♭4 (a flat symbol instead of a sharp letter).
+ * */
 export const transferStyle = internalTransferStyle as (
   note: ScientificNote,
   referenceNote: ScientificNote
 ) => ScientificNote;
 
+/**
+ * Transpose a note by a specific interval (use the Interval constant). An interval can also be negative.
+ * */
 export const transpose = internalTranspose as (
   note: ScientificNote,
   interval: Interval,
