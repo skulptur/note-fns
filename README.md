@@ -57,7 +57,7 @@ export type Midi = Opaque<number, 'Midi'>
 
 ### Functions
 
-These are from `music-fns`, but with typescript types.
+These are from [music-fns](https://github.com/madewithlove/music-fns), but with typescript types.
 
 - `accidentalToLetter`: Converts a note which has an accidental as a symbol (♭, ♯) to a note with the accidental as a letter (b, #).
 - `accidentalToSymbol`: Converts a note which has an accidental as a letter (b, #) to a note with the accidental as a symbol (♭, ♯).
