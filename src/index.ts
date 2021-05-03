@@ -14,7 +14,6 @@ export {
   Interval,
   Scale,
   Chord,
-  ScientificNotes,
   NoteIndex,
   Hertz,
   Midi,

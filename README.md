@@ -17,9 +17,9 @@ yarn add note-fns
 Use
 
 ```typescript
-import { getNote } from 'note-fns';
+import { getNote } from 'note-fns'
 
-console.log(getNote('A#4')); // 'A#'
+console.log(getNote('A#4')) // 'A#'
 ```
 
 ## API
@@ -37,7 +37,6 @@ console.log(getNote('A#4')); // 'A#'
 - `Interval`
 - `Scale`
 - `Chord`
-- `ScientificNotes`
 - `NoteIndex`
 - `Hertz`
 - `Midi`
@@ -55,7 +54,7 @@ These are from `music-fns`, but with typescript types.
 - `flatToSharp`: Converts a flat to its sharp equivalent, this function preserves the accidental style (letter or symbol).
 - `getAccidental`: Returns the accidental (or undefined) from a note.
 - `getChromaticCPosition`: Returns the (0-indexed) position of the specific root within a chromatic C scale (equals the NOTES constant).
-- `getDominant`: Returns the note on scale degree 5 in a diatonic scale. 
+- `getDominant`: Returns the note on scale degree 5 in a diatonic scale.
 - `getIntervals`: Returns one or more intervals between the provided notes.
 - `getLeadingTone`: Returns the note on scale degree 7 in a diatonic scale.
 - `getMediant`: Returns the note on scale degree 3 in a diatonic scale.
@@ -110,16 +109,15 @@ These are from `music-fns`, but with typescript types.
 - `isTone`: Returns true if the interval is a tone (2).
 - `isTriad`: Returns true if the chord is a triad (a set of three notes that can be stacked in thirds).
 
-
 ### Scales
 
 Note-fns exports each scale individually as well as an object `Scales` containing all of them. Example:
 
 ```typescript
-import { Scales, naturalMinorScale } from 'note-fns';
+import { Scales, naturalMinorScale } from 'note-fns'
 
-console.log(Scales.naturalMinor);
-console.log(naturalMinorScale);
+console.log(Scales.naturalMinor)
+console.log(naturalMinorScale)
 ```
 
 Included scales:
@@ -156,10 +154,10 @@ Included scales:
 Similarly as with scales, note-fns exports the constants directly as well as an object `Modes` containing all of them. Example:
 
 ```typescript
-import { Modes, phrygianMode } from 'note-fns';
+import { Modes, phrygianMode } from 'note-fns'
 
-console.log(Modes.phrygian);
-console.log(phrygianMode);
+console.log(Modes.phrygian)
+console.log(phrygianMode)
 ```
 
 Included Modes:
@@ -179,11 +177,11 @@ All interval consts are also exported individually, as well as with a short vers
 Example:
 
 ```typescript
-import { Intervals, perfectFithInterval, P5 } from 'note-fns';
+import { Intervals, perfectFithInterval, P5 } from 'note-fns'
 
-console.log(Intervals.perfectFith);
-console.log(perfectFithInterval);
-console.log(P5);
+console.log(Intervals.perfectFith)
+console.log(perfectFithInterval)
+console.log(P5)
 ```
 
 Included intervals:
