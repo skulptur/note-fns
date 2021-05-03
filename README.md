@@ -1,6 +1,6 @@
 ## About
 
-Use this library when you need a comprehensive but lightweight solution for working with musical notes in Typescript. It provides functions, types and contants that make it easy to manipulate musical note information. Works great in conjunction with other music related libraries.
+Use this library when you need a comprehensive but lightweight solution for working with musical notes in Typescript. It provides functions, types and constants that make it easy to manipulate musical note information. Works great in conjunction with other music related libraries.
 
 ## Get started
 
