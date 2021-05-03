@@ -1,4 +1,4 @@
-import { ExtractData, NoteContainer } from '../types/NoteContainer';
+import { ExtractData, NoteContainer } from './NoteContainer'
 
 export const mapData = <T extends NoteContainer>(
   note: T,
@@ -7,5 +7,5 @@ export const mapData = <T extends NoteContainer>(
   return {
     ...note,
     data: fn(note.data as ExtractData<T>),
-  };
-};
+  }
+}

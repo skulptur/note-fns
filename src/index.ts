@@ -1,11 +1,27 @@
-export { getMiddleCFrequency } from './lib/getMiddleCFrequency';
-export { mapData } from './lib/container/mapData';
-export { mapRange } from './lib/container/mapRange';
-export { mapValue } from './lib/container/mapValue';
-export { noteInterval } from './lib/noteInterval';
-export { toMidi } from './lib/toMidi';
+export { getMiddleCFrequency } from './lib/getMiddleCFrequency'
+export { noteInterval } from './lib/noteInterval'
+export { toMidi } from './lib/toMidi'
+
 export {
-  noteVariations,
+  Root,
+  NoteName,
+  NoteDescription,
+  Direction,
+  Accidental,
+  AccidentalType,
+  Octave,
+  ScientificNote,
+  Interval,
+  Scale,
+  Chord,
+  ScientificNotes,
+  NoteIndex,
+  Hertz,
+  Midi,
+} from './lib/types/types'
+
+// music-fns with types
+export {
   accidentalToLetter,
   accidentalToSymbol,
   areEqual,
@@ -29,6 +45,19 @@ export {
   getSubmediant,
   getSupertonic,
   getTonic,
+  normalize,
+  noteDescriptionToNote,
+  noteToFrequency,
+  noteToMidi,
+  noteToNoteDescription,
+  noteVariations,
+  sharpToFlat,
+  transferAccidental,
+  transferStyle,
+  transpose,
+} from './lib/musicFns'
+
+export {
   hasAccidental,
   hasAccidentalLetter,
   hasAccidentalSymbol,
@@ -56,16 +85,7 @@ export {
   isSharp,
   isTone,
   isTriad,
-  normalize,
-  noteToFrequency,
-  noteToMidi,
-  noteToNoteDescription,
-  noteDescriptionToNote,
-  sharpToFlat,
-  transferAccidental,
-  transferStyle,
-  transpose,
-} from './lib/musicFns';
+} from './lib/predicates'
 
 export {
   Scales,
@@ -95,7 +115,7 @@ export {
   prometheusScale,
   wholeToneScale,
   yoScale,
-} from './lib/scales';
+} from './lib/scales'
 
 export {
   Intervals,
@@ -162,7 +182,7 @@ export {
   diminishedOctaveInterval,
   augmentedSeventhInterval,
   A7,
-} from './lib/intervals';
+} from './lib/intervals'
 
 export {
   Modes,
@@ -173,7 +193,7 @@ export {
   mixolydianMode,
   aeolianMode,
   locrianMode,
-} from './lib/modes';
+} from './lib/modes'
 
 export {
   Chords,
@@ -185,4 +205,4 @@ export {
   minorSeventhChord,
   minorChord,
   seventhChord,
-} from './lib/chords';
+} from './lib/chords'

@@ -1,4 +1,4 @@
-import { ExtractValue, NoteContainer } from '../types/NoteContainer';
+import { ExtractValue, NoteContainer } from './NoteContainer'
 
 export const mapRange = <T extends NoteContainer>(
   note: T,
@@ -7,5 +7,5 @@ export const mapRange = <T extends NoteContainer>(
   return {
     ...note,
     value: fn(note.value as ExtractValue<T>),
-  };
-};
+  }
+}

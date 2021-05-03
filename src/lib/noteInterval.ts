@@ -20,4 +20,4 @@ export const noteInterval = {
   Bb: 10,
   B: 11,
   Cb: 11,
-} as const;
+} as const
