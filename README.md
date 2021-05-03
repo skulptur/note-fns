@@ -1,8 +1,6 @@
 ## About
 
-Use this library when you need a comprehensive but lightweight solution for working with musical notes in Typescript. It re-exports most of the [music-fns](https://github.com/madewithlove/music-fns) library and adds some more on top.
-
-**Please refer to music-fns documentation until documentation is added here. Notable differences are documented below!**
+Use this library when you need a comprehensive but lightweight solution for working with musical notes in Typescript. It provides functions, types and contants that make it easy to manipulate musical note information. Works great in conjunction with other music related libraries.
 
 ## Get started
 
@@ -41,7 +39,7 @@ console.log(getNote('A#4')) // 'A#'
 - `Hertz`
 - `Midi`
 
-### Main Functions
+### Functions
 
 These are from `music-fns`, but with typescript types.
 
@@ -76,7 +74,7 @@ These are from `music-fns`, but with typescript types.
 - `transferStyle`: Combination of transferAccidental and transferAccidentalStyle.
 - `transpose`: Transpose a note by a specific interval (use the Interval constant). An interval can also be negative.
 
-### Predicates
+##### Predicates
 
 - `areEqual`: Returns true if the provided notes are the same notes.
 - `areIntervals`: Returns true if the provided numbers are intervals.
@@ -172,9 +170,7 @@ Included Modes:
 
 ### Intervals
 
-All interval consts are also exported individually, as well as with a short version and an object `Intervals` containing both short and regular names.
-
-Example:
+All interval consts are also exported individually, as well as with a short version and an object `Intervals` containing both short and regular names. Example:
 
 ```typescript
 import { Intervals, perfectFithInterval, P5 } from 'note-fns'
